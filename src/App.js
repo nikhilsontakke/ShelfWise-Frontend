@@ -9,7 +9,7 @@ const App = () => {
   const handleSearch = async (query) => {
     if (query) {
       try {
-        const response = await fetch(`http://localhost:8080/books/all`);
+        const response = await fetch(`http://localhost:8080/search/title/${encodeURIComponent(query)}`);
         const data = await response.json();
         console.log('Fetched data:', data); // Log the response data
         setBooks(data || []);
