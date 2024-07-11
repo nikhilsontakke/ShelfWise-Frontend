@@ -6,23 +6,21 @@ import './App.css';
 const App = () => {
   const [books, setBooks] = useState([]);
 
-  const handleSearch = async (query) => {
-    if (query) {
-      try {
-        const response = await fetch(`http://localhost:8080/search/title/${encodeURIComponent(query)}`);
-        const data = await response.json();
-        console.log('Fetched data:', data); // Log the response data
-        setBooks(data || []);
-        console.log('Books state:', data || []);
-      } catch (error) {
-        console.error('Error fetching books:', error);
-      }
+  const handleSearch = async (endpoint) => {
+    try {
+      const response = await fetch(endpoint);
+      const data = await response.json();
+      console.log('Fetched data:', data); // Log the response data
+      setBooks(data || []);
+      console.log('Books state:', data || []);
+    } catch (error) {
+      console.error('Error fetching books:', error);
     }
   };
 
   return (
     <div className="app">
-      <h1>Book Search Engine</h1>
+      <h1>Shelfwise</h1>
       <SearchBar onSearch={handleSearch} />
       <BookList books={books} />
     </div>

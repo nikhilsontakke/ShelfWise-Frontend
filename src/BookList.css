@@ -1,38 +1,37 @@
+/* BookList.css */
+
 .book-list {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  table {
-    width: 100%;
-    max-width: 1200px;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 0.9em;
-    font-family: 'Arial', sans-serif;
-    min-width: 400px;
-    background-color: #fff; /* Set a light background color */
-  }
-  
-  table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  table th,
-  table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd; /* Add bottom border for cells */
-  }
-  
-  table tbody tr:nth-child(even) {
-    background-color: #f3f3f3; /* Alternate row background color */
-  }
-  
-  table tbody tr:hover {
-    background-color: #e0e0e0; /* Hover effect for rows */
-  }
-  
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.book-list table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f7e8e4; /* Peach background */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.book-list th,
+.book-list td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.book-list th {
+  background-color: #5c4033; /* Brown header */
+  color: white;
+  font-weight: bold;
+}
+
+.book-list td {
+  background-color: #f3dfd7; /* Light peach */
+  color: #333; /* Dark text */
+}
+
+.book-list tr:hover td {
+  background-color: #ecd8cf; /* Lighter peach on hover */
+}
