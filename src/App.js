@@ -18,10 +18,14 @@ const App = () => {
     }
   };
 
+  const openWebpage = () => {
+    window.open('/visualise.html', 'visualise');
+  };
+
   return (
     <div className="app">
       <h1>Shelfwise</h1>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} openPage={openWebpage} />
       <BookList books={books} />
     </div>
   );
