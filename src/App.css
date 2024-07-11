@@ -29,12 +29,18 @@ h1 {
   margin-bottom: 20px;
 }
 
+.book-list{
+  margin-left: 20px;
+  font-size: 1em;
+  color: #5c4033;
+}
 .search-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
   width: 70vw;
+  margin-left: 20px;
 }
 
 .search-bar input[type="text"],
